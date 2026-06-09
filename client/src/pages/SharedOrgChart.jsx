@@ -20,6 +20,7 @@ import {
   ChevronDown, ChevronRight, Search, X,
   GitBranch, Move, MousePointer2,
 } from 'lucide-react';
+import { API_BASE } from '../api/client';
 
 // ─── Constants (must match TraditionalOrgChart.jsx exactly) ──────────────────
 const CARD_W    = 176;
@@ -252,7 +253,7 @@ export default function SharedOrgChart() {
 
   // ── Load shared chart (public, no auth) ──
   useEffect(() => {
-    fetch(`/api/trad-org-chart/share/${id}`)
+    fetch(`${API_BASE}/trad-org-chart/share/${id}`)
       .then((r) => {
         if (!r.ok) throw new Error('Chart not found or link has expired.');
         return r.json();
