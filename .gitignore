@@ -1,0 +1,7 @@
+node_modules/
+server/orms.db
+server/orms.db-wal
+server/orms.db-shm
+dist/
+.env
+*.log
