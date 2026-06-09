@@ -11,7 +11,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: 'https://bb-org-chart.onrender.com',
         changeOrigin: true,
       },
     },
